@@ -5,6 +5,9 @@ import { getCollection } from 'astro:content';
 
 // Fetch all markdown files inside src/content/projects/
 const projects = await getCollection('projects');
+
+// Ensures a clean base URL without trailing slashes
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="მთავარი | ლალი ანთიძის საკვირაო სკოლა">
@@ -21,18 +24,21 @@ const projects = await getCollection('projects');
             <div class="cards-grid">
                 {projects.map((project) => (
                     <article class="card">
-                    <div class="card-image">
-                    <img src={project.data.image} alt={project.data.title} />
-                     </div>
-                   <div class="card-content">
-            		<h3>{project.data.title}</h3>
-            		<p>{project.data.description}</p>
-            		<a href={`/projects/${project.id}`} class="card-btn">ვრცლად</a>
-        			</div>
-    			</article>
-				))}
+                        <div class="card-image">
+                            <img 
+                                src={project.data.image.startsWith('http') ? project.data.image : `${baseUrl}${project.data.image}`} 
+                                alt={project.data.title} 
+                            />
+                        </div>
+                        <div class="card-content">
+                            <h3>{project.data.title}</h3>
+                            <p>{project.data.description}</p>
+                            <a href={`${baseUrl}/projects/${project.id}`} class="card-btn">ვრცლად</a>
+                        </div>
+                    </article>
+                ))}
             </div>
         </section>
-		
+        
     </main>
 </BaseLayout>
