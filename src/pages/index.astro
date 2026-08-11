@@ -1,18 +1,38 @@
 ---
+import ClubSlider from '../components/ClubSlider.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
+// Fetch all markdown files inside src/content/projects/
+const projects = await getCollection('projects');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astrosimeda</h1>
-	</body>
-	racxa racxa
-</html>
+<BaseLayout title="მთავარი | ლალი ანთიძის საკვირაო სკოლა">
+    <main class="main-content">
+        <ClubSlider/>
+        <section class="hero-section">
+            <h1>მოგესალმებით ლალი ანთიძის საკვირაო სკოლაში</h1>
+            <p>აღმოაჩინეთ ჩვენი სასწავლო პროგრამები, კლუბები და საგანმანათლებლო პროექტები.</p>
+        </section>
+
+        <section class="projects-section">
+            <h2 class="section-title">ჩვენი პროექტები და პროგრამები</h2>
+            
+            <div class="cards-grid">
+                {projects.map((project) => (
+                    <article class="card">
+                    <div class="card-image">
+                    <img src={project.data.image} alt={project.data.title} />
+                     </div>
+                   <div class="card-content">
+            		<h3>{project.data.title}</h3>
+            		<p>{project.data.description}</p>
+            		<a href={`/projects/${project.id}`} class="card-btn">ვრცლად</a>
+        			</div>
+    			</article>
+				))}
+            </div>
+        </section>
+		
+    </main>
+</BaseLayout>

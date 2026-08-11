@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="საკვირაო სკოლა">
+  <main class="content-wrapper">
+    <h1>საკვირაო სკოლა</h1>
+
+    <section class="section">
+      <h2>პროგრამის შესახებ</h2>
+      <p>
+        საკვირაო სკოლის პროგრამა შედგენილია ისეთი სასწავლო ბლოკებისაგან, რომელიც არ არის სასკოლო პროგრამის დუბლირება, მაგრამ მოსწავლეს ეხმარება სასკოლო დისციპლინების ათვისებაში. „ლალი ანთიძის საკვირაო სკოლა“ გთავაზობთ არაფორმალური განათლების ერთგვარ მოდელს, რომლის განხორციელებაც დაეხმარება მოსწავლეს მის მიერ დასახული მიზნების მიღწევაში. ორიენტირებულია როგორც ინტელექტუალური და შემეცნებითი უნარების, ისე პიროვნული და ფსიქოლოგიური შესაძლებლობების განვითარებაზე, ეხმარება სოციალიზაციაში.
+      </p>
+
+      <div class="method-card">
+        <strong>სწავლების მეთოდი:</strong> ინტეგრირებული გაკვეთილები — სწავლა კეთებით
+      </div>
+    </section>
+
+    <section class="section">
+      <p><strong>საკვირაო სკოლის პროგრამა შედგება შემდეგი ბლოკებისგან:</strong></p>
+      <ul class="program-list">
+        <li>მათემატიკური ლოგიკა</li>
+        <li>ზოგადი უნარების განმავითარებელი ტესტები</li>
+        <li>როლური თამაშები</li>
+        <li>შემოქმედებითი და ანალიტიკური წერა</li>
+        <li>თანამედროვე ბუნებისმეტყველების კონცეფციები (ასაკობრივად)</li>
+        <li>მითოლოგია</li>
+        <li>ტექსტთან მუშაობა</li>
+        <li>ინტელექტუალური თამაშები</li>
+        <li>სხვადასხვა უნარების განვითარებაზე ორიენტირებული სამაგიდო თამაშები</li>
+        <li>გამოყენებითი ხელოვნება</li>
+        <li>მოტორიკის განმავითარებელი აქტივობები</li>
+        <li>AI ტექნოლოგიების გამოყენება</li>
+        <li>კვლევითი პროექტები</li>
+      </ul>
+    </section>
+
+    <section class="section schedule-section">
+      <h2>განრიგი</h2>
+      <ul class="schedule-list">
+        <li>
+          <span class="days">შაბათი და კვირა (11:00 – 14:00)</span>
+          <span class="age">6-10 წლის მოსწავლეებისთვის</span>
+        </li>
+        <li>
+          <span class="days">შაბათი და კვირა (14:00 – 17:00)</span>
+          <span class="age">11-16 წლის მოსწავლეებისთვის</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .method-card {
+    background-color: #fff8ee;
+    border-left: 4px solid #f5a623;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    color: #333;
+  }
+
+  .program-list {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .program-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .schedule-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .schedule-list li {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .days {
+    font-weight: bold;
+    color: #f5a623;
+  }
+
+  .age {
+    color: #555;
+  }
+
+  @media (min-width: 600px) {
+    .schedule-list li {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+</style>

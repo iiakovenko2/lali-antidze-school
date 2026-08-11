@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="მკითხველთა კლუბი">
+  <main class="content-wrapper">
+    <h1>მკითხველთა კლუბი</h1>
+
+    <p class="intro-text">
+      „მკითხველთა კლუბის“ მიზანია, მოსწავლეს შეუყვარდეს კითხვის პროცესი და გააცნობიეროს კითხვის მნიშვნელობა თანამედროვე ადამიანისთვის.
+    </p>
+
+    <section class="section">
+      <p><strong>მეცადინეობის პროცესი მოიცავს შემდეგ ბლოკებს:</strong></p>
+      <ul class="check-list">
+        <li>✅ კითხვის ტემპის გაზრდა</li>
+        <li>✅ ტექსტის ჯგუფური ანალიზი</li>
+        <li>✅ ტექსტის ინდივიდუალური ანალიზი</li>
+        <li>✅ ტექსტის ინტერპრეტაცია</li>
+        <li>✅ ინფორმაციის ადეკვატურად აღქმა</li>
+        <li>✅ ინტერტექსტუალური კავშირების დამყარება</li>
+        <li>✅ წერითი უნარების განვითარება</li>
+        <li>✅ პრეზენტაციის უნარების განვითარება</li>
+        <li>✅ ინდივიდუალური ხედვების ჩამოყალიბება</li>
+        <li>✅ მჭევრმეტყველების განვითარება</li>
+        <li>✅ ტექსტის შემოქმედებითი თარგმნა</li>
+        <li>✅ თავად გახდეს შემოქმედი!</li>
+      </ul>
+    </section>
+
+    <div class="schedule-card">
+      <span class="icon">🗓</span>
+      <div>
+        <strong>მეცადინეობები ტარდება კვირაში ერთხელ.</strong><br />
+        <span>გაკვეთილის ხანგრძლივობაა 2 საათი.</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>კითხვის ტემპის გაუმჯობესება</h2>
+      <p>პროგრამა განკუთვნილია მათთვის, ვისაც სურს კითხვის ტემპის გაზრდა.</p>
+      <p>პროგრამა ასევე ეხმარება დისლექსიის მქონე მოსწავლეებს.</p>
+      <p>
+        პროგრამა გულისხმობს მასტერკლასებს და ავტოტრენინგებს კითხვის ტემპის გაუმჯობესების მიზნით, მოიცავს სავარჯიშოების 12 დონეს და ინდივიდუალურ შესაძლებლობებზე მორგებულ ტექსტებს.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #fff8ee;
+    padding-bottom: 0.5rem;
+  }
+
+  .check-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.75rem;
+  }
+
+  .check-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    color: #333333;
+  }
+
+  .schedule-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff8ee;
+    border-left: 4px solid #f5a623;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 1.05rem;
+    color: #333333;
+  }
+
+  .schedule-card .icon {
+    font-size: 1.5rem;
+  }
+</style>

@@ -1,0 +1,138 @@
+---
+---
+
+<!-- Top Header -->
+<header class="top-header">
+    <div class="social-links">
+        <a href="https://www.youtube.com/@skaproduction19" target="_blank" rel="noopener noreferrer">
+            <img src="/youtube.png" alt="YouTube">
+        </a>
+        <a href="https://www.facebook.com/laliskola" target="_blank" rel="noopener noreferrer">
+            <img src="/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/lali_antidzis_sakvirao_skola/" target="_blank" rel="noopener noreferrer">
+            <img src="/instagram.png" alt="Instagram">
+        </a>
+        <a href="tel:+995599230609">
+            <img src="/phone.png" alt="Phone">
+        </a>
+    </div>
+    <div class="contact-number">
+        +995 599 23 06 09
+    </div>
+</header>
+
+<!-- Banner (Clicking this now takes you home) -->
+<a href="/">
+    <img id="banner" src="/banner.jpg" alt="ლალი ანთიძის საკვირაო სკოლის ბანერი">
+</a>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+        
+        <!-- NEW: Dedicated Home Button -->
+        <li class="nav-item">
+            <a href="/">მთავარი</a>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">ჩვენ შესახებ <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/history">ჩვენი ისტორია</a></li>
+                <li><a href="/team">ჩვენი გუნდი</a></li>
+                <li><a href="/goal">ჩვენი მიზანი</a></li>
+                <li><a href="/achievements">მოსწავლეთა წარმატებები</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">საკვირაო სკოლა <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="sunday-school">პროგრამები</a></li>
+                <li><a href="sunday-school">განრიგი</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">მკითხველთა კლუბი <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="readers-club">კლუბის შესახებ</a></li>
+                <li><a href="readers-club">შეხვედრები</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">ლოგიკის კლუბი <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="logic-club">კლუბის შესახებ</a></li>
+                <li><a href="logic-club">აქტივობები</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">სკოლის საგნებში მომზადება <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="school-help">საგნები</a></li>
+                <li><a href="school-help">მასწავლებლები</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">სააბიტურიენტო პროგრამები <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">მათემატიკის რეპეტიტორი</a></li>
+                <li><a href="#">ქართული ენისა და ლიტერატურის რეპეტიტორი</a></li>
+                <li><a href="#">ზოგადი უნარების რეპეტიტორი</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">მედიაგალერეა <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">ფოტოები</a></li>
+                <li><a href="#">ვიდეოები</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+            <a href="#">განათლების ბლოგი <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">პუბლიკაციები</a></li>
+                <li><a href="#">"ლალისთან ყავაზე"</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a href="#">კონტაქტი</a>
+        </li>
+    </ul>
+</nav>
+
+<script is:inline>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle?.addEventListener('click', () => {
+        navLinks?.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-item.has-dropdown > a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 900) {
+                e.preventDefault();
+                const parent = link.parentElement;
+                
+                document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                    if (item !== parent) item.classList.remove('active-dropdown');
+                });
+
+                parent?.classList.toggle('active-dropdown');
+            }
+        });
+    });
+</script>

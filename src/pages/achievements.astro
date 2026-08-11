@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="კვლევის შედეგები">
+  <main class="content-wrapper">
+    <h1>მშობელთა უკუკავშირის კვლევის შედეგები</h1>
+
+    <p class="intro-text">
+      ლალი ანთიძის საკვირაო სკოლის მშობელთა ანონიმური კვლევის შედეგები ასახავს მოსწავლეთა აკადემიურ, ემოციურ და პიროვნულ პროგრესს.
+    </p>
+
+    <section class="section">
+      <h2>ნაწილი I — აკადემიური და ემოციური განვითარება</h2>
+      <ul class="check-list">
+        <li>📈 <strong>85%</strong> — მშობელთა აზრით, საკვირაო სკოლაში სიარულის შემდეგ გაუმჯობესდა ან საგრძნობლად გაუმჯობესდა ბავშვის <strong>აკადემიური მოსწრება</strong>.</li>
+        <li>📘 <strong>85%</strong> — თვლის, რომ გაუმჯობესდა ან საგრძნობლად გაუმჯობესდა ბავშვის <strong>სწავლისადმი დამოკიდებულება</strong>.</li>
+        <li>😊 <strong>75%</strong> — მიაჩნია, რომ გაუმჯობესდა ან საგრძნობლად გაუმჯობესდა ბავშვის <strong>ზოგადი ემოციური ფონი</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>ნაწილი II — ცნობისმოყვარეობა და უნარები</h2>
+      <ul class="check-list">
+        <li>💡 <strong>90%</strong> — მშობელთა აზრით, გაუმჯობესდა ბავშვის <strong>ცნობისმოყვარეობა</strong> და მისი დაკმაყოფილების სურვილი.</li>
+        <li>🎯 <strong>63%</strong> — ამბობს, რომ ბავშვმა გამოთქვა სურვილი თავისი ინტერესების შესაბამისად, <strong>დამოუკიდებლად ისწავლოს</strong> რაიმე.</li>
+        <li>🗣️ <strong>70%</strong> — მიაჩნია, რომ გაუმჯობესდა ან საგრძნობლად გაუმჯობესდა ბავშვის <strong>კომუნიკაციის უნარი</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>ნაწილი III — რას აკეთებს ბავშვი მოზღვავებული ცნობისმოყვარეობის დასაკმაყოფილებლად?</h2>
+      <ul class="check-list">
+        <li>❓ <strong>50%</strong> — სვამს ბევრ შეკითხვას</li>
+        <li>🚀 <strong>50%</strong> — დამოუკიდებლად დაიწყო რაიმეს შესწავლა</li>
+        <li>🌐 <strong>50%</strong> — ეძებს ინფორმაციას ინტერნეტში</li>
+        <li>📚 <strong>20%</strong> — კითხულობს წიგნებს, სტატიებს</li>
+        <li>🤝 <strong>5%</strong> — ეძებს თანამოაზრე მეგობრებს, მენტორებს</li>
+        <li>❌ <strong>0%</strong> — არაფერს</li>
+      </ul>
+    </section>
+
+    <div class="schedule-card">
+      <span class="icon">🏫</span>
+      <div>
+        <strong>მშობელთა 100% ატარებდა ბავშვს მსგავსი ტიპის კერძო სკოლაში.</strong>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #fff8ee;
+    padding-bottom: 0.5rem;
+  }
+
+  .check-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.75rem;
+  }
+
+  .check-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    color: #333333;
+  }
+
+  .schedule-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff8ee;
+    border-left: 4px solid #f5a623;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 1.05rem;
+    color: #333333;
+  }
+
+  .schedule-card .icon {
+    font-size: 1.5rem;
+  }
+</style>

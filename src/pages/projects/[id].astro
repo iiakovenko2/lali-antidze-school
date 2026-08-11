@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { id: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<BaseLayout title={project.data.title}>
+  <div class="project-page-container">
+    
+    <!-- Main Content Card -->
+    <article class="project-card">
+
+      <!-- Header Section -->
+      <header class="project-header">
+        <h1>{project.data.title}</h1>
+        
+      </header>
+
+      <div class="divider"></div>
+
+      <!-- Markdown Body Content -->
+      <div class="project-body">
+        <Content />
+      </div>
+
+    </article>
+  </div>
+</BaseLayout>

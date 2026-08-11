@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="სკოლის საგნებში მომზადება">
+  <main class="content-wrapper">
+    <h1>სკოლის საგნებში მომზადება</h1>
+
+    <div class="subtitle-badge">
+      განკუთვნილია I-VI კლასის მოსწავლეებისათვის
+    </div>
+
+    <section class="section">
+      <ul class="check-list">
+        <li>✅ მოსწავლეს ვეხმარებით საშინაო დავალებების შესრულებაში ყველა საგანში</li>
+        <li>✅ თითოეულ მოსწავლესთან ვმუშაობთ ინდივიდუალურად</li>
+        <li>✅ გარდა საშინაო დავალებებისა, მოსწავლე ასრულებს ზოგად განმავითარებელ სავარჯიშოებს</li>
+        <li>✅ ჩვენთან მუშაობის შედეგად ბავშვს შეუძლია ინფორმაციის დამუშავება, კლასიფიცირება, ანალიზი და უვითარდება კრიტიკული აზროვნება</li>
+      </ul>
+    </section>
+
+    <div class="goal-card">
+      <strong>ჩვენი მიზანია:</strong> მოსწავლემ თავად შეძლოს დამოუკიდებლად მუშაობა და ჩვენს ფუნქციას შესრულებულად მხოლოდ მაშინ ვთვლით, თუ მომავალ სასწავლო წელს იგი რეპეტიტორის გარეშე იმუშავებს.
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .subtitle-badge {
+    display: inline-block;
+    background-color: #fff8ee;
+    color: #e08b00;
+    font-weight: 600;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid #fce3b8;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .section {
+    margin-bottom: 1.5rem;
+  }
+
+  .check-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .check-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    color: #333333;
+  }
+
+  .goal-card {
+    background-color: #fff8ee;
+    border-left: 4px solid #f5a623;
+    padding: 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+  }
+
+  .goal-card strong {
+    color: #1a1a1a;
+  }
+</style>
