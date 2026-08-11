@@ -1,17 +1,23 @@
 ---
 import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
+
+// Ensures a clean base URL without trailing slashes
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <div class="slider-container">
   <div class="slider-track" id="sliderTrack">
     {projects.map((project) => (
       <div class="slide">
-        <img src={project.data.image} alt={project.data.title} />
+        <img 
+          src={project.data.image.startsWith('http') ? project.data.image : `${baseUrl}${project.data.image}`} 
+          alt={project.data.title} 
+        />
         <div class="slide-caption">
           <h2>{project.data.title}</h2>
           <p>{project.data.description}</p>
-          <a href={`/projects/${project.id}`} class="slider-link">ვრცლად</a>
+          <a href={`${baseUrl}/projects/${project.id}`} class="slider-link">ვრცლად</a>
         </div>
       </div>
     ))}
@@ -127,7 +133,6 @@ const projects = await getCollection('projects');
     resetInterval();
   });
 
-  // Auto-play every 5 seconds
   function startInterval() {
     slideInterval = setInterval(nextSlide, 5000);
   }
@@ -137,8 +142,6 @@ const projects = await getCollection('projects');
     startInterval();
   }
 
-  // Adjust on window resize
   window.addEventListener('resize', updateSlider);
-  
   startInterval();
 </script>
